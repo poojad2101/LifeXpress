@@ -1,5 +1,5 @@
 import Header from "../../components/header/Header";
-import Posts from "../../components/posts/posts"
+import Posts from "../../components/posts/Posts";
 import Sidebar from "../../components/sidebar/Sidebar";
 import "./Home.css"
 
