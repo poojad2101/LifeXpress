@@ -1,6 +1,6 @@
-import "./TopBar.css"
+import "./Topbar.css";
 
-export default function TopBar() {
+export default function Topbar() {
   return (
     <div className="top">
         <div className="topLeft">
@@ -8,7 +8,6 @@ export default function TopBar() {
         <i className="topIcon fab fa-instagram-square"></i>
         <i className="topIcon fab fa-pinterest-square"></i>
         <i className="topIcon fab fa-twitter-square"></i>
-
         </div>
         <div className="topCenter">
         <ul className="topList">
@@ -17,7 +16,7 @@ export default function TopBar() {
           <li className="topListItem">CONTACT</li>
           <li className="topListItem">WRITE</li>
           <li className="topListItem">LOGOUT</li>
-        </ul>
+        </ul> 
         </div>
         <div className="topRight">
             <img 
