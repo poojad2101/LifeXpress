@@ -4,6 +4,7 @@ const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const multer = require("multer");
 const authRoute = require("./routes/auth");
+const userRoute = require("./routes/users");
 
 dotenv.config();
 app.use(express.json());
@@ -16,6 +17,7 @@ mongoose.connect(process.env.MONGO_URL, {
   .catch((err) => console.log(err));
 
   app.use("routes/auth", authRoute);
+  app.use("routes/users", userRoute);
 
 app.use("/",(req, res) => {
 console.log("hi this is my app")
