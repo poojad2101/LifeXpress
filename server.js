@@ -29,6 +29,11 @@ const storage = multer.diskStorage({
   }
 });
 
+const upload = multer({ storage: storage });
+app.post("routes/upload", upload.single("file"), (req, res) => {
+  res.status(200).json("File has been uploaded");
+});
+
   app.use("/routes/auth", authRoute);
   app.use("/routes/users", userRoute);
   app.use("/routes/posts", postRoute)
