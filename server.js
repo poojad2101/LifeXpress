@@ -19,6 +19,16 @@ mongoose.connect(process.env.MONGO_URL, {
    .then(console.log("Connected to MongoDB"))
   .catch((err) => console.log(err));
 
+
+const storage = multer.diskStorage({
+  destination: (req, file, callback) => {
+    callback(null, "images");
+  },
+  filename: (req, file, callback) => {
+    callback(null, req.body.name);
+  }
+});
+
   app.use("/routes/auth", authRoute);
   app.use("/routes/users", userRoute);
   app.use("/routes/posts", postRoute)
