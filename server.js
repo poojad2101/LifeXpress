@@ -21,6 +21,7 @@ mongoose.connect(process.env.MONGO_URL, {
 
   app.use("/routes/auth", authRoute);
   app.use("/routes/users", userRoute);
+  app.use("/routes/posts", postRoute)
   app.use("/routes/categories", categoryRoute)
 
 app.use("/",(req, res) => {
