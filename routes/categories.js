@@ -15,7 +15,7 @@ router.post("/", async (req, res)=> {
 
 
     //get all categories
-    router.het("/", async (req, res)=> {
+    router.get("/", async (req, res)=> {
         const cats = await Category.find();
         try{
             const savedCat = await newCat.save();
